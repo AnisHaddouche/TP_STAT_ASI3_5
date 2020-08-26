@@ -1,0 +1,169 @@
+\documentclass[a4paper,reqno,11pt]{article}
+\def\Annee{2018-2019}
+\def\NumeroTP{2}
+\def\Theme{Estimation ponctuelle et par intervalle de confiance}
+
+\usepackage[utf8]{inputenc} 
+\renewcommand*\familydefault{\sfdefault} 
+
+\input ListeDefinitions_TD
+
+\begin{document}
+
+\noindent
+{\large M.A. Haddouche \\ A. Rogozan \hfill Année 2019-2020} 
+\vspace{4ex}
+
+\begin{center}
+{\Large ASI3 } \\
+\vspace{1ex}
+
+{\bf\large 
+
+\  \Theme}
+\end{center}
+\vspace{1ex}
+
+
+\begin{partie}{\sf \ 
+		\vspace{1ex} 
+		
+L'objet de cette partie est d'étudier par simulations
+le comportement de l'estimateur du maximum de vraisemblance
+du paramètre d'une loi géométrique.
+On rappelle que la loi géométrique de paramètre
+$p$ est la loi du nombre $X$ d'épreuves de Bernoulli
+indépendantes de même paramètre $p$,
+nécessaires à l'obtention d'un succès.
+On note alors $X\sim G(p)$.
+Ainsi, $X$ prend les valeurs 1, 2, 3, \ldots avec
+pour tout $x\in \bkN^*$, \
+$\bkP\cro{X = x} = p (1-p)^{x-1}$.
+En utilisant la fonction génératrice, on montre
+que $\bkE(X) = {1}/{p}$.
+
+%%%%%%%%%%%%
+
+		
+		Soit $X$ une variable aléatoire 
+		de loi géométrique de paramètre $p$ avec $p \in ]0,1[$.
+		\noindent
+		On s'intéresse à l'estimation du paramètre $p$.
+		On sait que $\bkE(X) = {1}/{p}$.
+		Il est donc facile  de proposer un estimateur du paramètre $p$.
+		En effet, si on dispose d'un échantillon
+		de variables aléatoires $X_1, X_2, \ldots, X_n$, indépendantes et de même loi
+		géométrique de paramètre $p$, alors
+		$\Xbar_n$ est un estimateur sans biais de ${1}/{p}$.
+		Ainsi, pour estimer $p$, on peut proposer l'estimateur
+		$\pchap = {1}/{\Xbar_n}$.
+		Il se trouve que cet estimateur est aussi 
+		l'estimateur du maximum de vraisemblance.
+		L'objet de cette première partie est d'étudier par simulations le comportement à distance finie de l'estimateur du paramètre $p$.
+		
+			\vspace{4ex}
+			
+		\begin{itemize}
+			\item[1] Simuler 400 échantillon de 1000 réalisations d'une variable aléatoire géométrique de paramètre $p=2/5$ et stocker la dans la matrice \verb|data|. 
+			
+			\vspace{1ex}
+						
+			\item[2] Pour chaque colonne de données, construisez la suite des valeurs \textbf{successives} de l'estimateur du paramètre $p$ et dont on stocker les résultats dans une matrice \verb|M|. 
+			
+			\vspace{1ex}
+			
+			\item[3] Tracer, sur le même graphique, les boites à moustaches des 400 estimations pour les tailles d'échantillon $n=50, 100,$$200, 500, 1000$ et tracer, sur ce mème graphique, la valeur de $p$.
+			
+			\vspace{1ex}
+			
+			\item [4] Analyser et commentez les résultats obtenus. 
+			Que sommes-nous amener à illustrer avec un tel graphique ?
+			
+			
+%			\vspace{1ex}
+%						
+%			\item [5]
+%			Faite tourner votre programme pour d'autres valeurs du paramètre $p$
+%			(on pourra essayer les valeurs $p=0.1$, $p=0.7$ et $p=0.9$.
+%			Observe-t-on un changement de comportement de l'estimateur en fonction de la valeur de $p$ ?
+		\end{itemize}
+	
+	
+		
+		
+	
+}\end{partie}
+%%%%%%%%%%%%
+\begin{partie}{\sf \ 
+		\vspace{1ex}
+		
+Dans un centre avicole, des études antérieures 
+ont montré que le poids d’un oeuf choisi au hasard 
+peut être considérée comme la réalisation d’une variable aléatoire gaussienne  $X$, 
+d'espérance  $\mu$ et de variance $\sigma^2$. 
+On admet que les poids des oeufs sont indépendants les uns des autres.
+On prend un échantillon de $n = 36$ oeufs que l’on pèse.
+Les mesures obtenues (exprimées en $g$) sont dans (par ordre croissant) le fichier {\verb oeufs.txt } sur Moodle 
+%
+\begin{itemize}
+	\item[1] Stocker les données dans le vecteur \verb|x|. (utiliser la fonction \verb|np.genfromtxt(,)|) et tracer l'histogramme des fréquence et superposer sur ce dernier la densité de la loi normal. Commenter
+	
+	\vspace{1ex}
+	
+	\item[2] Proposer des estimateurs sans biais de la moyenne $\mu$  et de la variance $\sigma^2$  et donner une estimation de ces deux paramètres. On notera, respectivement, ces  estimateur $\bar{X}, S^2$ et les estimations  $\bar{x}$ et $s^2$
+	
+%	\vspace{1ex}
+%	\item[3]  Construire un intervalle de confiance au niveau 95\% pour le poids  moyen des oeufs.
+
+\end{itemize}	
+
+%Comme nous sommes  dans le cadre de l'échantillon gaussien, et que $\sigma$ est inconnue,
+%l'intervalle de confiance au niveau 95\%
+%du poids moyen des oeufs est donné par :
+%
+%$$\mbox{IC}_{95\%}(\mu) = \cro{m \pm t_{35, 0.975} \,\dfrac{s}{\sqrt{36}}} $$
+%
+%où $t_{35, 0.975}$ désigne le quantile d'ordre 0,975 d'une Student à 35 ddl.
+
+
+	\vspace{1ex}
+\begin{itemize}
+	 
+	 \item[3] Quelle est la loi de la variable $\sqrt{n}(\bar{X}-\mu)/S$.
+	\vspace{1ex}
+	
+	\item [4]  Construisez un intervalle de confiance  bilatérale au niveau 95\% pour le poids  moyen des oeufs et commenter.
+\end{itemize}
+
+	\vspace{1ex}
+	
+On souhaiterais maintenant construire un intervalle de confiance bilatérale au niveau 95\% pour la variance $\sigma^2$ de la variable aléatoire $X$
+
+\vspace{1ex}
+
+\begin{itemize}
+	
+	\item[5] Quelle est la loi de la variable aléatoire $Z=(n-1)S^2 / \sigma^2$, où $S^2$ est un estimateurs sans biais de $\sigma^2$
+	
+	\item[6] Calculez les quantiles d'ordre $0.975$ et $0.025$ de $Z$.
+	
+	\vspace{1ex}
+	
+	\item[7] Construire un intervalle de confiance au niveau 95\% pour la variance et commenter.
+
+
+
+\vspace{1ex}
+
+\item[7] On sait que la demi-longueur
+de l'intervalle de confiance pour $\mu$ est égale à 
+$t_{35, 1-\alpha/2}\times  s / \sqrt{36}$. A quel niveau de confiance correspondrait un intervalle centré en $m$ et de demi-longueur 0,76 ?
+(\verb|Utiliser la fonction chi2.cdf() dans scipy.stats|)  
+
+\end{itemize}
+}\end{partie}
+
+
+
+
+\end{document}

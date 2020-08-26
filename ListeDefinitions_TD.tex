@@ -1,0 +1,144 @@
+\usepackage[dvips]{graphicx}
+\usepackage{amsmath,amssymb,color}
+\usepackage[francais]{babel}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{dsfont}
+
+
+
+\marginparwidth 0pt
+\oddsidemargin 0pt
+\evensidemargin 0pt
+\marginparsep 0pt
+\topmargin 0pt
+\textwidth 16cm
+\textheight 23.5cm
+\parindent 5mm
+\raggedbottom
+\baselineskip 4mm
+\input epsf
+
+\font\bfitun=cmbxti10 scaled\magstep1
+\font\bfit=cmbxti10
+
+\def\build#1_#2^#3{\mathrel{
+\mathop{\kern 0pt#1}\limits_{#2}^{#3}}}
+\def\simiid{{\build{\sim}_{}^{iid}}}
+\def\Annexe{{\large Annexe}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand\tablename{Tableau}
+\newtheorem{theo}{Théorème}
+\newtheorem{rem}[theo]{Remarque}
+\newtheorem{Def}[theo]{Définition}
+\newtheorem{prop}[theo]{Proposition}
+\newtheorem{exer}[theo]{Exercice~E.\hspace*{-1ex}}
+\newtheorem{partie}[theo]{Partie}
+\newtheorem{annexe}{\Annexe}
+\newtheorem{coro}[theo]{Corollaire}
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\bqa}{\begin{eqnarray}}
+\newcommand{\eqa}{\end{eqnarray}}
+\newcommand{\bdesc}{\begin{description}}
+\newcommand{\edesc}{\end{description}}
+\newcommand{\bqan}{\begin{eqnarray*}}
+\newcommand{\eqan}{\end{eqnarray*}}
+\newcommand{\ph}[1]{\varphi({#1})}
+\newcommand{\HM}{\mbox{\rm (H.M)}}
+\newcommand{\HK}{\mbox{\rm (H.K)}}
+\newcommand{\EMC}{\mbox{\rm EMC}}
+\newcommand{\ENP}{\mbox{\rm ENP}}
+\def\finl{\hfill\break}
+\def\soulign#1{$\underline{\hbox{#1}}$}
+\def\norm#1{\left\| #1 \right\|}
+\def\abs#1{\left| #1 \right|}
+\def\acc#1{\left\{ #1 \right\}}
+\def\pa#1{\left( #1 \right)}
+\def\pab#1{\Bigl( #1 \Bigr)}
+\def\crob#1{\Bigl[ #1 \Bigr]}
+\def\cro#1{\left[ #1 \right]}
+\def\crois#1{<\! #1 \!>}
+\def\ndx2{n\,d_x^2}
+\def\sigmachapn{\widehat{\sigma}_n}
+
+\def\og{\mbox{\tiny $\ll$}}
+\def\fg{\mbox{\tiny $\gg$}}
+
+\def\bkE{{\mathbb{E}}}
+\def\bkV{{\mathbb{V}}}
+\def\bkR{{\mathbb{R}}}
+
+\def\bkF{\mbox{{\rm I\kern-.17em F}}}
+\def\indicat{\mbox{{\rm 1\hskip -0.14cm {\large 1}}}}
+\def\bkNp{\mbox{{\small\rm I\kern-.20em N}}}
+\def\bkO{{\rm \kern.24em
+            \vrule width.05em height1.4ex depth-.05ex
+            \kern-.26em O}}
+\def\bkZ{\mbox{{\rm Z\kern-.32em Z}}}
+\def\equival{\Longleftrightarrow}
+\newcommand{\impliq}{\Longrightarrow}
+\def\non{\mbox{$^{\mbox{\bf --}}$\kern-.1em \vrule width.05em height1.5ex}}
+\def\et{\mbox{\rm\ et\ }}
+\def\ou{\mbox{\rm\ ou\ }}
+\newcommand{\boite}
+{\mbox{\small\bf\begin{tabular}{|c|}\hline \ \ \\ \hline\end{tabular}}}
+\def\comp{\mbox{\Large ${\cal C}$}}
+\def\Chi{\mbox{\Large $\chi$}}
+\def\pabig#1{\Bigl( #1 \Bigr)}
+\def\Xbar{\overline{X}}
+\def\xbar{\overline{x}}
+\def\Ybar{\overline{Y}}
+\def\ybar{\overline{y}}
+\def\zbar{\overline{z}}
+\def\tbar{\overline{t}}
+\def\Cov{\mbox{\rm Cov}}
+\def\Var{\mbox{\rm $\bkV$ar}}
+\def\ptnoir{\mbox{\Large\bf .}}    %    \footnotesize $\bullet$}}
+\def\nptpt{n_{\ptnoir\!\ptnoir}}
+\def\nipt{n_{i\ptnoir}}
+\def\nptj{n_{\ptnoir j}}
+\def\nij{n_{ij}}
+\def\entoure#1{\fbox{\mbox{#1}}}
+\def\emptysq{\mathbin{\vbox{\hrule\hbox{\vrule height1ex \kern.5em 
+       \vrule height1ex}\hrule}}}
+
+\def\rouge#1{\textcolor{red}{#1}}
+\def\rougebf#1{\textcolor{red}{\bf #1}}
+\def\rougebfit#1{\textcolor{red}{\bfit #1}}
+\def\bleubf#1{\textcolor{blue}{\bf #1}}
+\def\vertbf#1{\textcolor{green}{\bf #1}}
+
+\def\R{\textcolor{blue}{\bfit R\ }}
+\def\ychap{\widehat y}
+\def\wbeta{\widehat\beta}
+\def\fchap{\widehat f}
+\def\gchap{\widehat g}
+
+\def\uniset{\mathds{1}}
+\def\bkP{\mathbb{P}}
+
+
+
+
+\def\build#1_#2^#3{\mathrel{
+\mathop{\kern 0pt#1}\limits_{#2}^{#3}}}
+\def\tend_#1^#2{\mathrel{
+\mathop{\kern 0pt\longrightarrow}\limits_{#1}^{#2}}}
+\def\ntinf{n \rightarrow \infty}
+\def\tendvers{\tend_{\ntinf}^{}}
+\def\tendas{\tend_{\ntinf}^{a.s.}}
+\def\tendps{\tend_{\ntinf}^{p.s.}}
+\def\tendpsB{\tend_{B\rightarrow \infty}^{p.s.}}
+\def\tendprob{\tend_{\ntinf}^{P}}
+\def\tenddist{\tend_{\ntinf}^{d}}
+\def\tendloi{\tend_{\ntinf}^{{\cal L}}}
+\def\egaldef{\build{=}_{}^{{\rm def}}}
+\def\egalas{\build{=}_{}^{{\rm a.s.}}}
+\def\egalps{\build{=}_{}^{{\rm p.s.}}}
+\def\sousH0{\build{\sim}_{H_0}^{}}
+
+\def\pchap{\widehat p_n}
+\def\bkN{\mathbb{N}}
+
